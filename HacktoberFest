@@ -1,0 +1,29 @@
+import java.util.Scanner; // imports functions of the scanner and random functions
+import java.util.Random;
+
+public class HacktoberFest
+{
+   public static void main(String[] args)
+   {
+      String firstname, lastname, mutation1, mutation2, newname; // defines variables as strings
+      int num1; // defines num1 as an integer
+      
+      Scanner scan = new Scanner(System.in); // defines scanner function
+      Random generator = new Random(); // defines random generator function
+      
+      System.out.println("Enter your first name: ");
+      firstname = scan.nextLine(); // sets the value of this string given by the user
+      
+      System.out.println("Enter your last name: ");
+      lastname = scan.nextLine(); // sets the value of this string given by the user
+      
+      mutation1 = firstname.substring(0,1); // takes the first letter of the string firstname
+      mutation2 = lastname.substring(0,5); // takes the first five letters of the string lastname
+      
+      num1 = generator.nextInt(90) + 10; // picks a random value between 10 and 99
+      
+      newname = mutation1 + mutation2 + num1; // combines the mutations defined above and the random number function between 10 and 99
+      
+      System.out.println("Your random name generator is " + newname); // prints newname defines in line 25
+    }
+    }
